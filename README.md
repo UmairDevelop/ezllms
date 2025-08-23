@@ -4,6 +4,26 @@
 
 This repository powers the LLMS.txt site.
 
+## Deployment Instructions
+
+### For cPanel/Shared Hosting:
+1. Run `npm run build:prod` to create production build
+2. Upload the contents of the `dist` folder to your public_html directory
+3. Make sure `.htaccess` file is uploaded (it handles routing)
+4. Your site should work with proper routing
+
+### For Netlify:
+1. Connect your repository to Netlify
+2. Build command: `npm run build:prod`
+3. Publish directory: `dist`
+4. The `_redirects` file will handle routing automatically
+
+### For Vercel:
+1. Connect your repository to Vercel
+2. Framework preset: Vite
+3. Build command: `npm run build:prod`
+4. Output directory: `dist`
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
@@ -58,7 +78,20 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Build and deploy the site with your preferred hosting provider.
+### Production Build
+```bash
+npm run build:prod
+```
+
+### Deploy to cPanel/Shared Hosting
+1. Build the project: `npm run build:prod`
+2. Upload contents of `dist` folder to `public_html`
+3. Ensure `.htaccess` is uploaded for proper routing
+
+### Deploy to Netlify/Vercel
+- Connect your repository
+- Set build command to `npm run build:prod`
+- Set publish directory to `dist`
 
 ## Custom domain
 

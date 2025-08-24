@@ -18,7 +18,7 @@ export const SupportButtons = () => {
         variant="outline"
         size="sm"
         className="border-primary/20 hover:bg-primary/5 transition-smooth"
-        onClick={() => window.open('/Donate', '_self')}
+        onClick={() => window.location.href = '/donate'}
       >
         <Bitcoin className="h-4 w-4 mr-2" />
         Donate with Crypto
